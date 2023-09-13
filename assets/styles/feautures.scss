@@ -1,0 +1,59 @@
+@import "variables";
+
+@mixin underline-from-center(
+  $transition: 0.5s,
+  $color: var(--color-primary),
+  $width: 110%,
+  $height: 3px,
+  $bottom: -5px,
+  $left: -5%
+) {
+  position: relative;
+  transition: $transition;
+  &:before {
+    content: "";
+    width: 110%;
+    height: 3px;
+    background: $color;
+    position: absolute;
+    transition: $transition;
+    transform: scale(0);
+    bottom: -5px;
+    left: $left;
+  }
+
+  &:hover:before {
+    @media #{$mouseDevice} {
+      transform: scale(1);
+    }
+  }
+}
+
+@mixin underline (
+  $width: 110%,
+  $height: 3px,
+  $background: var(--color-primary),
+  $bottom: -5px,
+  $left: -5%
+) {
+  position: relative;
+
+  &:before {
+    content: "";
+    width: $width;
+    height: $height;
+    background: $background;
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+  }
+}
+
+.hover-scale {
+  transition: 0.5s;
+  &:hover {
+    @media #{$mouseDevice} {
+      transform: scale(1.2);
+    }
+  }
+}

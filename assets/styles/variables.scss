@@ -1,0 +1,20 @@
+:root {
+  --font-family-primary: "Georgia";
+  --font-family-secondary: 'Arial';
+
+  --font-weight-normal: 400;
+
+  --font-size-normal: 15px;
+  --font-line-normal: 24px;
+
+  --color-primary: #F1CDB3;
+  --color-common-inverted-h: #ffffff;
+  --color-common-inverted-p: #CDCDCD;
+  --color-common-h: #545454;
+  --color-common-p: #4C4C4C;
+  --color-primary-btn: #292929;
+
+  --font-normal: var(--font-size-normal) / var(--font-line-normal) var(--font-family-secondary)
+}
+
+$mouseDevice: '(hover:hover) and (pointer:fine)';
