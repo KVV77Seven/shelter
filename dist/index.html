@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>shelter</title>
-<script defer src="bundle.3571385000f043505ccd.js"></script><link href="style.css" rel="stylesheet"></head>
+<script defer src="bundle.eb3e041a5f134660d4b2.js"></script><link href="style.css" rel="stylesheet"></head>
 <body>
     <header class="header">
         <nav class="header__navbar">
@@ -14,25 +14,75 @@
                 <h1 class="header__title">Cozy House</h1>
                 <p class="header__subtitle">Shelter for pets in Boston</p>
             </div>
-            <ul class="header__menu">
-                <li class="header__item">
-                    <a href="#" class="header__link header__link_active">About the shelter</a>
-                </li>
-                <li class="header__item">
-                    <a href="#" class="header__link">Our pets</a>
-                </li>
-                <li class="header__item">
-                    <a href="#" class="header__link">Help the shelter</a>
-                </li>
-                <li class="header__item">
-                    <a href="#" class="header__link">Contacts</a>
-                </li>
-            </ul>
-
+            <div class="header__menu-bg" id="burger-menu">
+                <ul class="header__menu" id="burger-menu-body">
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link header__menu-link_active">About the shelter</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Our pets</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Help the shelter</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__burger" id="burger">
+                <div class="header__burger-item"></div>
+                <div class="header__burger-item"></div>
+                <div class="header__burger-item"></div>
+            </div>
         </nav>
     </header>
     <section class="welcome">
-        <h2>Not only people need a house</h2>
+        <h2 class="welcome__title">Not only people
+            <br/> need a house
+        </h2>
+        <p class="welcome__description">
+            We offer to give a chance to a little and nice puppy with an
+            extremely wide and open heart. He or she will love you more than
+            anybody else in the world, you will see!
+        </p>
+        <button class="btn-primary welcome__btn">Make a friend</button>
+        <img class="welcome__img" src="../assets/pictures/startScreen/welcome-puppy.png" alt="Пёсик">
+    </section>
+    <section class="about">
+        <h2 class="about__title">
+            About the shelter <br/>“Cozy House”
+        </h2>
+        <div class="about__description-container">
+            <p class="about__description">
+                Currently we have 121 dogs and 342 cats on our hands and statistics
+                show that only 20% of them will find a family. The others will continue
+                to live with us and will be waiting for a lucky chance to become dearly
+                loved.
+            </p>
+            <p class="about__description">
+                We feed our wards with the best food and make sure that they do not get
+                sick, feel comfortable (including psychologically) and well. We are
+                supported by 87 volunteers and 28 employees of various skill levels.
+                About 12% of the animals are taken by the shelter staff. Taking care
+                of the animals, they become attached to the pets and would hardly ever
+                leave them alone.
+            </p>
+        </div>
+        <img src="../assets/pictures/startScreen/about-pets.png" alt="dog and cat" class="about__img">
+    </section>
+    <section class="pets">
+        <h2 class="pets__title">
+            Our friends who <br>
+            are looking for a house
+        </h2>
+        <div class="pets__carousel">
+            <figure class="pets__card">
+                <img src="cat" class="pets__card-img" alt="cat">
+                <figcaption class="pets__card-caption">Katrine</figcaption>
+                <button class="btn-primary_outlined">Learn more</button>
+            </figure>
+        </div>
     </section>
 </body>
 </html>

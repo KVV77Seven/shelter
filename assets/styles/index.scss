@@ -71,7 +71,7 @@ h1,h2,h3,h4,h5,h6 {
   width: 100vw;
   right: -100vw;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.5);
   height: 100vh;
   transition: 0.3s;
   z-index: 1;
@@ -86,9 +86,9 @@ h1,h2,h3,h4,h5,h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: var(--color-primary-btn);
   margin-left: auto;
   width: 320px;
-  background: #222222;
   height: 100%;
   z-index: 1;
 }
@@ -152,7 +152,9 @@ h1,h2,h3,h4,h5,h6 {
 
 //welcome section start ##############################
 .welcome {
-  background: #222222;
+  background: url('../pictures/startScreen/gradient-background-sm.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 150px 10px 0 10px;
   display: flex;
   flex-direction: column;
@@ -178,7 +180,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .welcome__img {
   height: 270px;
-  width: auto;
+  align-self: flex-end;
   margin-left: 40px;
   margin-top: 104px;
 }
@@ -219,23 +221,49 @@ h1,h2,h3,h4,h5,h6 {
 .about__img {
   margin: 42px 20px 0 20px;
   height: 354px;
-  width: auto;
+  align-self: center;
 }
 //about section end ##############################
 
 //pets section start ##############################
 .pets {
   background: #F6F6F6;
+  padding: 42px 25px 0 25px;
+  padding-bottom: 42px;
 }
 
+.pets__title {
+  font-size: 25px;
+  line-height: 32.5px;
+}
+.pets__card-caption {
+  font-family: var(--font-family-primary);
+  size: 20px;
+  line-height: 22.72px;
+  margin: 30px auto 0 auto
+}
 .pets__carousel {
   
+}
+
+.pets__carousel-btn {
+  height: 52px;
+  width: 52px;
+  border-radius: 100px;
+  background: transparent;
+  border: 2px solid var(--color-primary);
+}
+
+.pets__card-btn {
+  margin-top: 30px;
+  align-self: center;
 }
 
 .pets__card {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
+  background: #FAFAFA;
+  padding-bottom: 30px;
 }
 
 .pets__card-img {
@@ -243,7 +271,123 @@ h1,h2,h3,h4,h5,h6 {
   width: 270px;
 }
 
+.pets__carousel-nav-btns-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.pets__btn {
+  margin-top: 42px;
+}
+
 //pets section end ##############################
+
+//help section start ##############################
+.help {
+  padding: 42px 0;
+}
+.help__icons-container {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 30px;
+  margin-top: 42px;
+}
+.help__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.help__title {
+  font-size: 25px;
+  line-height: 32.5px;
+}
+.help__img {
+  height: 50px;
+  width: 50px;
+}
+.help__icon-caption {
+  margin-top: 20px;
+}
+//help section end ##############################
+
+//donation section start ##############################
+.donation {
+  background-color: #F6F6F6;
+  padding: 42px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.donation__payment-title {
+  margin-top: 20px;
+}
+.donation__credit-card-container {
+  margin: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: var(--color-primary);
+  border: 0;
+  border-radius: 9px;
+}
+.donation__credit-card {
+  background: transparent;
+  color: var(--color-common-h);
+  font-family: var(--font-family-primary);
+  width: 100%;
+  margin-left: 15px;
+  border: 0;
+  outline: 0;
+}
+.donation__description {
+  font-style: italic;
+  color: var(--color-common-p-light);
+  margin: 20px 20px 0 20px;
+  size: 12px;
+  text-align: justify;
+}
+.donation__img {
+  margin: 42px 30px 0 30px;
+  height: 135.2px;
+}
+//donation section end ##############################
+
+//donation section end ##############################
+footer {
+  padding: 30px 10px 0 10px;
+  background: url('../pictures/startScreen/footer-sm.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer__title {
+  font-size: 25px;
+  line-height: 32.5px;
+  color: var(--color-common-inverted-h);
+}
+.footer__connection-icons-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__connection-icon-container{
+  display: flex;
+  flex-direction: row;
+  p {
+    margin-left: 20px;
+    color: var(--color-primary);
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+//donation section end ##############################
 
 @media (min-width: $break-md) {
   .header__menu-bg {
@@ -258,6 +402,7 @@ h1,h2,h3,h4,h5,h6 {
   .header__menu {
     display: flex;
     flex-direction: row;
+    background: transparent;
     justify-content: space-around;
     width: auto;
   }

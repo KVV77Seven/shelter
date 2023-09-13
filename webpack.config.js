@@ -17,13 +17,18 @@ module.exports = {
     },
     module: {
         rules: [{
+            test: /\.html$/i,
+            loader: "html-loader",
+          },
+          {
             test:/\.(s*)css$/,
             use: [
                 miniCss.loader,
                 'css-loader',
                 'sass-loader',
             ]
-        }]
+        }
+    ]
     },
     plugins: [
         new miniCss({
