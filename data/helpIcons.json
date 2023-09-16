@@ -1,0 +1,38 @@
+{
+  "petFood": {
+    "name": "Pet food",
+    "imgSrc": "shelter/assets/pictures/icons/icon-pet-food.svg"
+  },
+  "transportation": {
+    "name": "Transportation",
+    "imgSrc": "shelter/assets/pictures/icons/icon-transportation.svg"
+  },
+  "toys": {
+    "name": "Toys",
+    "imgSrc": "shelter/assets/pictures/icons/icon-toys.svg"
+  },
+  "bowlsAndCups": {
+    "name": "Bowls and cups",
+    "imgSrc": "shelter/assets/pictures/icons/icon-bowls-and-cups.svg"
+  },
+  "shampoos": {
+    "name": "Shampoos",
+    "imgSrc": "shelter/assets/pictures/icons/icon-shampoos.svg"
+  },
+  "vitamins": {
+    "name": "Vitamins",
+    "imgSrc": "shelter/assets/pictures/icons/icon-vitamins.svg"
+  },
+  "medicines": {
+    "name": "Medicines",
+    "imgSrc": "shelter/assets/pictures/icons/icon-medicines.svg"
+  },
+  "collarsLeashes": {
+    "name": "Collars / leashes",
+    "imgSrc": "shelter/assets/pictures/icons/icon-collars-leashes.svg"
+  },
+  "sleepingAreas": {
+    "name": "Sleeping areas",
+    "imgSrc": "shelter/assets/pictures/icons/icon-sleeping-area.svg"
+  }
+}

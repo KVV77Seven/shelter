@@ -1,0 +1,42 @@
+{
+  "katrine": {
+    "name": "Katrine",
+    "id": "1",
+    "imgSrc": "shelter/assets/pictures/pets/katrine.png"
+  },
+  "jennifer": {
+    "name": "Jennifer",
+    "id": "2",
+    "imgSrc": "shelter/assets/pictures/pets/jennifer.png"
+  },
+  "woody": {
+    "name": "Woody",
+    "id": "3",
+    "imgSrc": "shelter/assets/pictures/pets/woody.png"
+  },
+  "sophia": {
+    "name": "Sophia",
+    "id": "4",
+    "imgSrc": "shelter/assets/pictures/pets/sophia.png"
+  },
+  "timmy": {
+    "name": "Timmy",
+    "id": "5",
+    "imgSrc": "shelter/assets/pictures/pets/timmy.png"
+  },
+  "charly": {
+    "name": "Charly",
+    "id": "6",
+    "imgSrc": "shelter/assets/pictures/pets/charly.png"
+  },
+  "scarlett": {
+    "name": "Scarlett",
+    "id": "7",
+    "imgSrc": "shelter/assets/pictures/pets/scarlett.png"
+  },
+  "freddie": {
+    "name": "Freddie",
+    "id": "8",
+    "imgSrc": "shelter/assets/pictures/pets/freddie.png"
+  }
+}

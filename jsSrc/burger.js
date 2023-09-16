@@ -1,3 +1,5 @@
+import {lockScroll, unlockScroll} from "shelter/jsSrc/utils";
+
 const burger = document.getElementById('burger');
 const burgerMenu = document.getElementById('burger-menu')
 const burgerBody = document.getElementById('burger-menu-body');
@@ -23,10 +25,12 @@ export function burgerInit() {
         burgerMenu.classList.remove(burgerMenuOpenClass);
         burger.classList.remove(burgerOpenClass);
         isOpen = false;
+        unlockScroll();
     }
     function openMenu() {
         burgerMenu.classList.add(burgerMenuOpenClass);
         burger.classList.add(burgerOpenClass);
         isOpen = true;
+        lockScroll();
     }
 }

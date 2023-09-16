@@ -1,3 +1,5 @@
+@import 'breakpoints';
+
 :root {
   --font-family-primary: "Georgia";
   --font-family-secondary: 'Arial';
@@ -7,6 +9,9 @@
   --font-size-normal: 15px;
   --font-line-normal: 24px;
 
+  --font-size-title: 25px;
+  --font-line-title: 32.5px;
+
   --color-primary: #F1CDB3;
   --color-common-inverted-h: #ffffff;
   --color-common-inverted-p: #CDCDCD;
@@ -15,7 +20,17 @@
   --color-common-p-light: #B2B2B2;
   --color-primary-btn: #292929;
 
-  --font-normal: var(--font-size-normal) / var(--font-line-normal) var(--font-family-secondary)
+  --font-normal: var(--font-size-normal) / var(--font-line-normal) var(--font-family-secondary);
+  --font-title: var(--font-size-title) / var(--font-line-title) var(--font-family-primary);
+
+  --section-gap-top: 42px;
+  --section-gap-bottom: 42px;
+}
+@media (min-width: $break-md) {
+  :root {
+    --font-size-title: 35px;
+    --font-line-title: 45.5px;
+  }
 }
 
 $mouseDevice: '(hover:hover) and (pointer:fine)';
