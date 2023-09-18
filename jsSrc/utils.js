@@ -7,6 +7,12 @@ export function unlockScroll() {
     bodyStyle.overflow = '';
 }
 
+export function appendChilds(element, childs) {
+    childs.forEach((child) => {
+        element.appendChild(child);
+    })
+}
+
 export default function TEST() {
 
 }

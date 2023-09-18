@@ -257,19 +257,11 @@ h1,h2,h3,h4,h5,h6 {
 .pets__title {
   font: var(--font-title);
 }
-.pets__card-caption {
+.pet-card__caption {
   font-family: var(--font-family-primary);
   font-size: 20px;
   line-height: 22.72px;
   margin: 30px auto 0 auto
-}
-.pets__carousel {
-  .pets__card:nth-child(2) {
-    display: none;
-  }
-  .pets__card:nth-child(3) {
-    display: none;
-  }
 }
 
 .pets__carousel-btn {
@@ -288,23 +280,24 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
-.pets__card-btn {
+.pet-card__btn {
   margin-top: 30px;
   align-self: center;
 }
 
-.pets__card {
+.pet-card {
   display: flex;
   flex-direction: column;
   background: #FAFAFA;
   padding-bottom: 30px;
+  transition: 0.2s ease-in-out;
 
   &:not(:first-child) {
     margin-left: 40px;
   }
 }
 
-.pets__card-img {
+.pet-card__img {
   height: 270px;
   width: 270px;
   margin: 0 auto;
@@ -347,15 +340,19 @@ h1,h2,h3,h4,h5,h6 {
 .pets__cards-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  max-width: 270px;
 }
 
 .pets__modal-img {
   display: none;
+  border-radius: 0 0 0 9px;
 }
 
 .pets__cards-block-container {
-
+  display: flex;
+  justify-content: center;
 
   .pets__carousel-btn {
     display: none;
@@ -374,16 +371,6 @@ h1,h2,h3,h4,h5,h6 {
   &_open {
     display: flex !important;
   }
-
-  .btn-primary_outlined {
-    padding: 0;
-    width: 52px;
-    height: 52px;
-    position: absolute;
-    top: -52px;
-    right: -30px;
-    font-family: var(--font-family-primary);
-  }
   h3 {
     font-size: 35px;
     line-height: 45.5px;
@@ -393,12 +380,6 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 20px;
     line-height: 23px;
   }
-  .pets__modal-description {
-    margin-top: 20px;
-    font-size: 13px;
-    line-height: 14.3px;
-    text-align: justify;
-  }
   span {
     font-family: var(--font-family-primary);
     font-weight: 700;
@@ -406,21 +387,45 @@ h1,h2,h3,h4,h5,h6 {
   p {
     font-family: var(--font-family-primary);
   }
-  ul {
-    margin-top: 24px;
-    font-size: 15px;
-  }
-  li {
-    font-family: var(--font-family-primary);
-
-  }
   li::before {
+  }
+}
+
+.pets__close-modal {
+  padding: 0;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  top: -52px;
+  right: -30px;
+  font-family: var(--font-family-primary);
+}
+
+.pets__modal-feature-item {
+  font-family: var(--font-family-primary);
+
+  &:not(:first-child) {
+    margin-top: 5px;
+  }
+  &::before {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: var(--color-primary);
     font-weight: 400;
     display: inline-block;
     width: 14px;
   }
+}
+
+.pets__modal-feature-list {
+  margin-top: 24px;
+  font-size: 15px;
+}
+
+.pets__modal-description {
+  margin-top: 20px;
+  font-size: 13px;
+  line-height: 14.3px;
+  text-align: justify;
 }
 //pets section end ##############################
 

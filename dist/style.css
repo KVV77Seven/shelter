@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-primary); }
 
 .welcome {
-  background: url(d:\Programming\Sites\Shelter\distd9c7f60b07bc8ac8bff0.png);
+  background: url(img/caa9450c5f920246c006.png);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 150px 10px 0 10px;
@@ -284,22 +284,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .pets {
   background: #F6F6F6;
-  padding: 42px 25px 0 25px;
-  padding-bottom: 42px; }
+  padding: 42px 25px 42px 25px; }
 
 .pets__title {
   font: var(--font-title); }
 
-.pets__card-caption {
+.pet-card__caption {
   font-family: var(--font-family-primary);
-  size: 20px;
+  font-size: 20px;
   line-height: 22.72px;
   margin: 30px auto 0 auto; }
 
-.pets__carousel .pets__card:nth-child(2) {
+.pets__carousel .pet-card:nth-child(2) {
   display: none; }
 
-.pets__carousel .pets__card:nth-child(3) {
+.pets__carousel .pet-card:nth-child(3) {
   display: none; }
 
 .pets__carousel-btn {
@@ -314,19 +313,19 @@ h1, h2, h3, h4, h5, h6 {
     .pets__carousel-btn:hover {
       background: var(--color-primary); } }
 
-.pets__card-btn {
+.pet-card__btn {
   margin-top: 30px;
   align-self: center; }
 
-.pets__card {
+.pet-card {
   display: flex;
   flex-direction: column;
   background: #FAFAFA;
   padding-bottom: 30px; }
-  .pets__card:not(:first-child) {
+  .pet-card:not(:first-child) {
     margin-left: 40px; }
 
-.pets__card-img {
+.pet-card__img {
   height: 270px;
   width: 270px;
   margin: 0 auto; }
@@ -364,53 +363,66 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   justify-content: center; }
 
+.pets__modal-img {
+  display: none;
+  border-radius: 9px; }
+
 .pets__cards-block-container .pets__carousel-btn {
   display: none; }
 
-#pets__carousel-modal-body {
+.pets__modal-body {
   position: relative;
   max-width: 240px;
   background: #FAFAFA;
   border: 0;
   border-radius: 9px;
-  padding: 10px; }
-  #pets__carousel-modal-body .btn-primary_outlined {
-    padding: 0;
-    width: 52px;
-    height: 52px;
-    position: absolute;
-    top: -52px;
-    right: -30px;
-    font-family: var(--font-family-primary); }
-  #pets__carousel-modal-body h3 {
+  padding: 10px;
+  display: none; }
+  .pets__modal-body_open {
+    display: flex !important; }
+  .pets__modal-body h3 {
     font-size: 35px;
     line-height: 45.5px; }
-  #pets__carousel-modal-body h4 {
+  .pets__modal-body h4 {
     margin-top: 10px;
     font-size: 20px;
     line-height: 23px; }
-  #pets__carousel-modal-body .pets__modal-description {
-    margin-top: 20px;
-    font-size: 13px;
-    line-height: 14.3px;
-    text-align: justify; }
-  #pets__carousel-modal-body span {
+  .pets__modal-body span {
     font-family: var(--font-family-primary);
     font-weight: 700; }
-  #pets__carousel-modal-body p {
+  .pets__modal-body p {
     font-family: var(--font-family-primary); }
-  #pets__carousel-modal-body ul {
-    margin-top: 24px;
-    font-size: 15px; }
-  #pets__carousel-modal-body li {
-    font-family: var(--font-family-primary); }
-  #pets__carousel-modal-body li::before {
+
+.pets__close-modal {
+  padding: 0;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  top: -52px;
+  right: -30px;
+  font-family: var(--font-family-primary); }
+
+.pets__modal-feature-item {
+  font-family: var(--font-family-primary); }
+  .pets__modal-feature-item:not(:first-child) {
+    margin-top: 5px; }
+  .pets__modal-feature-item::before {
     content: "\2022";
     /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: var(--color-primary);
     font-weight: 400;
     display: inline-block;
     width: 14px; }
+
+.pets__modal-feature-list {
+  margin-top: 24px;
+  font-size: 15px; }
+
+.pets__modal-description {
+  margin-top: 20px;
+  font-size: 13px;
+  line-height: 14.3px;
+  text-align: justify; }
 
 .help {
   padding: 42px 0; }
@@ -497,7 +509,7 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
   padding: 30px 10px 0 10px;
-  background: url(d:\Programming\Sites\Shelter\dist18c6f6758428fbd940cf.png) no-repeat;
+  background: url(img/7f0fee9317440f03615c.png) no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column; }
@@ -599,7 +611,7 @@ footer {
     padding: 80px 30px 100px 30px; }
   .pets__carousel-nav-btns-container {
     display: none; }
-  .pets__carousel .pets__card:nth-child(2) {
+  .pets__carousel .pet-card:nth-child(2) {
     display: flex; }
   .pets__cards-block-container {
     max-width: 708px;
@@ -610,8 +622,27 @@ footer {
     align-items: center; }
     .pets__cards-block-container .pets__carousel-btn {
       display: block; }
+  .pets__modal-img {
+    display: block;
+    width: 350px;
+    height: 350px; }
+  .pets__modal-body {
+    flex-direction: row;
+    column-gap: 12px;
+    max-width: 630px;
+    padding: 0; }
+  .pets__modal-name {
+    text-align: left; }
+  .pets__modal-breed {
+    text-align: left; }
+  .pets__close-modal {
+    right: -43px; }
+  .pets__modal-description {
+    text-align: left; }
   .pets__cards-container {
     justify-content: space-between; }
+  .pets__modal-text-container {
+    padding: 10px 10px 0 0; }
   .pets__btn {
     margin-top: 60px; }
   .help {
@@ -699,13 +730,30 @@ footer {
   .about__img {
     order: 1; }
   .about__text-container {
-    order: 2; }
+    order: 2;
+    max-width: 958px; }
   .pets {
     padding: 80px 40px 100px 40px; }
-  .pets__carousel .pets__card:nth-child(3) {
+  .pets__carousel .pet-card:nth-child(3) {
     display: flex; }
+  .pets__modal-img {
+    width: 500px;
+    height: 500px; }
+  .pets__modal-description {
+    font-size: 15px;
+    line-height: 16.5px;
+    margin-top: 40px; }
+  .pets__modal-text-container {
+    padding: 50px 20px 0 0; }
+  .pets__modal-body {
+    gap: 30px;
+    max-width: 900px; }
   .pets__cards-block-container {
     max-width: 1200px; }
+  .pets__modal-feature-list {
+    margin-top: 40px; }
+  .pets__modal-feature-item:not(:first-child) {
+    margin-top: 10px; }
   .help__icons-container {
     display: flex;
     flex-flow: row wrap;
@@ -733,5 +781,6 @@ footer {
     margin: 0;
     gap: 160px;
     justify-content: space-between;
+    align-self: center;
     max-width: 100%; } }
 

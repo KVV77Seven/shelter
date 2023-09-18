@@ -84,11 +84,6 @@
   .pets__carousel-nav-btns-container {
     display: none;
   }
-  .pets__carousel {
-    .pets__card:nth-child(2) {
-      display: flex;
-    }
-  }
   .pets__cards-block-container {
     max-width: 708px;
     margin: 60px auto 0 auto;
@@ -99,6 +94,11 @@
     .pets__carousel-btn {
       display: block;
     }
+  }
+  .pets__cards-container {
+    justify-content: flex-start;
+    max-width: 580px;
+
   }
   .pets__modal-img {
     display: block;
@@ -118,7 +118,7 @@
     text-align: left;
   }
   .pets__close-modal {
-
+    right: -43px;
   }
   .pets__modal-description {
     text-align: left;

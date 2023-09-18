@@ -42,13 +42,35 @@
   .pets {
     padding: 80px 40px 100px 40px;
   }
-  .pets__carousel {
-    .pets__card:nth-child(3) {
-      display: flex;
-    }
+  .pets__modal-img {
+    width: 500px;
+    height: 500px;
+  }
+  .pets__modal-description {
+    font-size: 15px;
+    line-height: 16.5px;
+    margin-top: 40px;
+  }
+  .pets__modal-text-container {
+    padding: 50px 20px 0 0;
+  }
+  .pets__modal-body {
+    gap: 30px;
+    max-width: 900px;
   }
   .pets__cards-block-container {
     max-width: 1200px;
+  }
+  .pets__cards-container {
+    max-width: 890px;
+  }
+  .pets__modal-feature-list {
+    margin-top: 40px;
+  }
+  .pets__modal-feature-item {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
   }
 
   .help__icons-container {

@@ -16,9 +16,23 @@ module.exports = {
         }
     },
     module: {
-        rules: [{
-            test: /\.html$/i,
-            loader: "html-loader",
+        rules: [
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+
+            },
+            {
+                test: /\?.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            ['@babel/preset-env', { targets: "defaults" }]
+                        ]
+                    }
+                }
             },
             {
             test:/\.(s*)css$/,
@@ -27,6 +41,13 @@ module.exports = {
                 'css-loader',
                 'sass-loader',
                 ]
+            },
+            {
+                test: /\.(jpg|png|svg)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'img/[hash][ext]'
+                }
             },
         ]
     },
@@ -37,6 +58,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'pages', 'index.html'),
             filename: "index.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'pages', 'ourPets.html'),
+            filename: "ourPets.html"
         }),
     ],
 };

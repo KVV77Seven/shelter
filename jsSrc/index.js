@@ -4,9 +4,11 @@ import  '../assets/styles/index.md.scss';
 import '../assets/styles/index.lg.scss';
 
 import {burgerInit} from "./burger";
-import {init as petsModalInit} from './petsModal';
 import {init as cardValidatorInit} from "./cardValidator";
+import {init as petsCarouseInit} from "./petsCarousel";
+import {init as bpInit} from "shelter/jsSrc/breakpoints";
 
+bpInit();
 burgerInit();
-petsModalInit();
 cardValidatorInit();
+petsCarouseInit(1,2, 3);

@@ -6,8 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>shelter</title>
-<script defer src="D:\Programming\Sites\Shelter\dist/bundle.c519a06d69daf1728f62.js"></script><link href="D:\Programming\Sites\Shelter\dist/style.css" rel="stylesheet"></head>
+<script defer src="bundle.3322527fac4ed03578ed.js"></script><link href="style.css" rel="stylesheet"></head>
 <body>
+    <div id="TEST"></div>
     <header class="header">
         <nav class="header__navbar">
             <div class="header__logo">
@@ -20,7 +21,7 @@
                         <a href="#" class="header__menu-link header__menu-link_active">About the shelter</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Our pets</a>
+                        <a href="./ourPets.html" class="header__menu-link">Our pets</a>
                     </li>
                     <li class="header__menu-item">
                         <a href="#" class="header__menu-link">Help the shelter</a>
@@ -55,7 +56,7 @@
 
         <img
                 class="welcome__img"
-                src="D:\Programming\Sites\Shelter\dist/1962bacf9ff865c8f2e0.png"
+                src="img/b1be486973892fcb7e85.png"
                 alt="Пёсик"
         >
     </section>
@@ -79,7 +80,7 @@
                 leave them alone.
             </p>
         </div>
-        <img src="D:\Programming\Sites\Shelter\dist/7e4ec01ff1347809c883.png" alt="dog and cat" class="about__img">
+        <img src="img/8248cc94bfa10cf53fb1.png" alt="dog and cat" class="about__img">
     </section>
     <section class="pets">
         <h2 class="pets__title">
@@ -88,49 +89,92 @@
         </h2>
         <div class="pets__carousel" id="pets__carousel">
             <div class="pets__cards-block-container">
-                <button class="pets__carousel-btn"><img src="D:\Programming\Sites\Shelter\dist/871fcc7c022bd87dd456.jpg" alt="left-arr"></button>
-                <div class="pets__cards-container">
-                    <figure class="pets__card">
-                        <img src="D:\Programming\Sites\Shelter\dist/0b642f3d261ce54a6a0a.png" class="pets__card-img" alt="cat">
-                        <figcaption class="pets__card-caption">Katrine</figcaption>
-                        <button class="btn-primary_outlined pets__card-btn">Learn more</button>
+                <button class="pets__carousel-btn"><img src="img/1727643124ea11e85f20.svg" alt="left-arr"></button>
+                <div class="pets__cards-container" id="pets__cards-container">
+                    <figure class="pet-card">
+                        <img src="img/ae2f72ce7b0fde78e861.png" class="pet-card__img" alt="cat">
+                        <figcaption class="pet-card__caption">Katrine</figcaption>
+                        <button class="btn-primary_outlined pet-card__btn">Learn more</button>
                     </figure>
-                    <figure class="pets__card">
-                        <img src="D:\Programming\Sites\Shelter\dist/0b642f3d261ce54a6a0a.png" class="pets__card-img" alt="cat">
-                        <figcaption class="pets__card-caption">Katrine</figcaption>
-                        <button class="btn-primary_outlined pets__card-btn">Learn more</button>
+                    <figure class="pet-card">
+                        <img src="img/9b681b2b9a5c4ead263f.png" class="pet-card__img" alt="cat">
+                        <figcaption class="pet-card__caption">Jennifer</figcaption>
+                        <button class="btn-primary_outlined pet-card__btn">Learn more</button>
                     </figure>
-                    <figure class="pets__card">
-                        <img src="D:\Programming\Sites\Shelter\dist/0b642f3d261ce54a6a0a.png" class="pets__card-img" alt="cat">
-                        <figcaption class="pets__card-caption">Katrine</figcaption>
-                        <button class="btn-primary_outlined pets__card-btn">Learn more</button>
+                    <figure class="pet-card">
+                        <img src="img/c0e4bdcd7647ea797a7c.png" class="pet-card__img" alt="cat">
+                        <figcaption class="pet-card__caption">Woody</figcaption>
+                        <button class="btn-primary_outlined pet-card__btn">Learn more</button>
                     </figure>
                 </div>
-                <button class="pets__carousel-btn"><img src="D:\Programming\Sites\Shelter\dist/ab5027548515021ae482.jpg" alt="right-arr"></button>
+                <button class="pets__carousel-btn"><img src="img/598f3c03b8a07625e96d.svg" alt="right-arr"></button>
             </div>
 
             <div id="pets__carousel-modal" class="pets__carousel-modal">
-                <div id="pets__carousel-modal-body">
-                    <button class="btn-primary_outlined" id="pets__close-modal">
-                        <img src="D:\Programming\Sites\Shelter\dist/e7ec03580e1496053d1d.svg" alt="close">
+                <div class="pets__modal-body">
+                    <button class="btn-primary_outlined pets__close-modal">
+                        <img src="img/e7ec03580e1496053d1d.svg" alt="close">
                     </button>
-                    <h3 class="pets__modal-name">Jennifer</h3>
-                    <h4 class="pets__modal-breed">Dog - Labrador</h4>
-                    <p class="pets__modal-description">Jennifer is a sweet 2 months old Labrador that is patiently
-                        waiting to find a new forever home. This girl really enjoys being able to go outside to run
-                        and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
-                    <ul class="pets__modal-feature-list">
-                        <li class="pets__modal-feature-item"><span class="pets__feature">Age: </span>2 months</li>
-                        <li class="pets__modal-feature-item"><span class="pets__feature">Inoculations: </span>none</li>
-                        <li class="pets__modal-feature-item"><span class="pets__feature">Diseases: </span>none</li>
-                        <li class="pets__modal-feature-item"><span class="pets__feature">Parasites: </span>none</li>
-                    </ul>
+                    <img src="img/ae2f72ce7b0fde78e861.png" alt="" class="pets__modal-img">
+                    <div class="pets__modal-text-container">
+                        <h3 class="pets__modal-name">Katrine</h3>
+                        <h4 class="pets__modal-breed">Cat - British Shorthair</h4>
+                        <p class="pets__modal-description">Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur.
+                            Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves
+                            cuddles and to stretch into your hands for a deeper relaxations.</p>
+                        <ul class="pets__modal-feature-list">
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Age: </span>2 months</li>
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Inoculations: </span>none</li>
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Diseases: </span>none</li>
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Parasites: </span>none</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pets__modal-body">
+                    <button class="btn-primary_outlined pets__close-modal">
+                        <img src="img/e7ec03580e1496053d1d.svg" alt="close">
+                    </button>
+                    <img src="img/9b681b2b9a5c4ead263f.png" alt="" class="pets__modal-img">
+                    <div class="pets__modal-text-container">
+                        <h3 class="pets__modal-name">Jennifer</h3>
+                        <h4 class="pets__modal-breed">Dog - Labrador</h4>
+                        <p class="pets__modal-description">Jennifer is a sweet 2 months old Labrador that is patiently
+                            waiting to find a new forever home. This girl really enjoys being able to go outside to run
+                            and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+                        <ul class="pets__modal-feature-list">
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Age: </span>2 months</li>
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Inoculations: </span>none</li>
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Diseases: </span>none</li>
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Parasites: </span>none</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pets__modal-body">
+                    <button class="btn-primary_outlined pets__close-modal">
+                        <img src="img/e7ec03580e1496053d1d.svg" alt="close">
+                    </button>
+                    <img src="img/c0e4bdcd7647ea797a7c.png" alt="" class="pets__modal-img">
+                    <div class="pets__modal-text-container">
+                        <h3 class="pets__modal-name">Woody</h3>
+                        <h4 class="pets__modal-breed">Dog - Golden Retriever</h4>
+                        <p class="pets__modal-description">Woody is a handsome 3 1/2 year old boy.
+                            Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a
+                            lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.</p>
+                        <ul class="pets__modal-feature-list">
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Age: </span>2 months</li>
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Inoculations: </span>none</li>
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Diseases: </span>none</li>
+                            <li class="pets__modal-feature-item"><span class="pets__feature">Parasites: </span>none</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="pets__carousel-btns-container">
                 <div class="pets__carousel-nav-btns-container">
-                    <button class="pets__carousel-btn"><img src="D:\Programming\Sites\Shelter\dist/871fcc7c022bd87dd456.jpg" alt="left-arr"></button>
-                    <button class="pets__carousel-btn"><img src="D:\Programming\Sites\Shelter\dist/ab5027548515021ae482.jpg" alt="right-arr"></button>
+                    <button class="pets__carousel-btn"><img src="img/1727643124ea11e85f20.svg" alt="left-arr"></button>
+                    <button class="pets__carousel-btn"><img src="img/598f3c03b8a07625e96d.svg" alt="right-arr"></button>
                 </div>
                 <button class="btn-primary pets__btn">Get to know to reset</button>
             </div>
@@ -140,39 +184,39 @@
         <h2 class="help__title">How you can help <br>our shelter</h2>
         <div class="help__icons-container" id="help__icons-container">
             <figure class="help__icon">
-                <img src="D:\Programming\Sites\Shelter\dist/70df9a9b720b69b0fc97.svg" class="help__img" alt="pet food">
+                <img src="img/70df9a9b720b69b0fc97.svg" class="help__img" alt="pet food">
                 <figcaption class="help__icon-caption">Pet food</figcaption>
             </figure>
             <figure class="help__icon">
-                <img src="D:\Programming\Sites\Shelter\dist/e44bd78fc309a64fa5ab.svg" class="help__img" alt="icon-transportation">
+                <img src="img/e44bd78fc309a64fa5ab.svg" class="help__img" alt="icon-transportation">
                 <figcaption class="help__icon-caption">Transportation</figcaption>
             </figure>
             <figure class="help__icon">
-                <img src="D:\Programming\Sites\Shelter\dist/2ec471e823c8fd5307a8.svg" class="help__img" alt="icon-transportation">
+                <img src="img/2ec471e823c8fd5307a8.svg" class="help__img" alt="icon-transportation">
                 <figcaption class="help__icon-caption">Toys</figcaption>
             </figure>
             <figure class="help__icon">
-                <img src="D:\Programming\Sites\Shelter\dist/344a1a5083208daa4f63.svg" class="help__img" alt="icon-transportation">
+                <img src="img/344a1a5083208daa4f63.svg" class="help__img" alt="icon-transportation">
                 <figcaption class="help__icon-caption">Bowls and cups</figcaption>
             </figure>
             <figure class="help__icon">
-                <img src="D:\Programming\Sites\Shelter\dist/28945e8d51027835c49f.svg" class="help__img" alt="icon-transportation">
+                <img src="img/28945e8d51027835c49f.svg" class="help__img" alt="icon-transportation">
                 <figcaption class="help__icon-caption">Shampoos</figcaption>
             </figure>
             <figure class="help__icon">
-                <img src="D:\Programming\Sites\Shelter\dist/1b69e5989e9538d76e3e.svg" class="help__img" alt="icon-transportation">
+                <img src="img/1b69e5989e9538d76e3e.svg" class="help__img" alt="icon-transportation">
                 <figcaption class="help__icon-caption">Vitamins</figcaption>
             </figure>
             <figure class="help__icon">
-                <img src="D:\Programming\Sites\Shelter\dist/3eab0056224de74ecf59.svg" class="help__img" alt="icon-transportation">
+                <img src="img/3eab0056224de74ecf59.svg" class="help__img" alt="icon-transportation">
                 <figcaption class="help__icon-caption">Medicines</figcaption>
             </figure>
             <figure class="help__icon">
-                <img src="D:\Programming\Sites\Shelter\dist/64b3973f2e9484a864b9.svg" class="help__img" alt="icon-transportation">
+                <img src="img/64b3973f2e9484a864b9.svg" class="help__img" alt="icon-transportation">
                 <figcaption class="help__icon-caption">Collars / leashes</figcaption>
             </figure>
             <figure class="help__icon">
-                <img src="D:\Programming\Sites\Shelter\dist/ff7f2094da8b9bfb2348.svg" class="help__img" alt="icon-transportation">
+                <img src="img/ff7f2094da8b9bfb2348.svg" class="help__img" alt="icon-transportation">
                 <figcaption class="help__icon-caption">Sleeping areas</figcaption>
             </figure>
         </div>
@@ -185,7 +229,7 @@
             <div class="donation__payment-form">
                 <p class="donation__payment-title">Name of the bank / Type of bank account</p>
                 <div class="donation__credit-card-container">
-                    <img src="D:\Programming\Sites\Shelter\dist/4ba0426d2bc74b7a78f3.svg" alt="card">
+                    <img src="img/4ba0426d2bc74b7a78f3.svg" alt="card">
                     <input type="text" class="donation__credit-card" id="card-input" placeholder="8380 2880 8028 8791 7435">
                 </div>
             </div>
@@ -206,8 +250,8 @@
                 class="donation__img"
                 src="../assets/pictures/startScreen/donation-dog.png"
         >-->
-        <img src="D:\Programming\Sites\Shelter\dist/2e09f6c5e2aeb58b205b.png" alt="" class="donation__img visible-sm">
-        <img src="D:\Programming\Sites\Shelter\dist/2e914c0c4d8a841e8534.png" alt="" class="donation__img visible-md">
+        <img src="img/1c11bfc6accb82edfb8d.png" alt="" class="donation__img visible-sm">
+        <img src="img/50d0cad5be1d0d87b825.png" alt="" class="donation__img visible-md">
     </section>
     <footer class="footer">
         <div class="footer__blocks-container">
@@ -215,11 +259,11 @@
                 <h3 class="footer__title">For questions <br class="visible-md"> and suggestions</h3>
                 <div class="footer__icons-container">
                     <div class="footer__connection-icon-container">
-                        <img src="D:\Programming\Sites\Shelter\dist/ed33c30e94f6a2b4e039.svg" alt="email">
+                        <img src="img/ed33c30e94f6a2b4e039.svg" alt="email">
                         <p class="footer__connection-desc">email@shelter.com</p>
                     </div>
                     <div class="footer__connection-icon-container">
-                        <img src="D:\Programming\Sites\Shelter\dist/7ccd27521c6ac31851c3.svg" alt="email">
+                        <img src="img/7ccd27521c6ac31851c3.svg" alt="email">
                         <p class="footer__connection-desc">+13 674 567 75 54</p>
                     </div>
                 </div>
@@ -229,11 +273,11 @@
                 <div class="footer__icons-container">
                     <div class="footer__icons-container-points">
                         <div class="footer__connection-icon-container">
-                            <img src="D:\Programming\Sites\Shelter\dist/2efb38d93b648dcbb32b.svg" alt="email">
+                            <img src="img/2efb38d93b648dcbb32b.svg" alt="email">
                             <p class="footer__connection-desc">1 Central Street, Boston (entrance from the store)</p>
                         </div>
                         <div class="footer__connection-icon-container">
-                            <img src="D:\Programming\Sites\Shelter\dist/2efb38d93b648dcbb32b.svg" alt="email">
+                            <img src="img/2efb38d93b648dcbb32b.svg" alt="email">
                             <p class="footer__connection-desc">18 South Park, London</p>
                         </div>
                     </div>
@@ -241,7 +285,7 @@
             </div>
         </div>
 
-        <img src="D:\Programming\Sites\Shelter\dist/e004648bbaa4be792043.png" alt="dog" class="footer__img">
+        <img src="img/5d8d476895d089ab3efc.png" alt="dog" class="footer__img">
     </footer>
 </body>
 </html>

@@ -8,6 +8,7 @@
     <title>shelter</title>
 </head>
 <body>
+    <div id="TEST"></div>
     <header class="header">
         <nav class="header__navbar">
             <div class="header__logo">
@@ -20,7 +21,7 @@
                         <a href="#" class="header__menu-link header__menu-link_active">About the shelter</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Our pets</a>
+                        <a href="./ourPets.html" class="header__menu-link">Our pets</a>
                     </li>
                     <li class="header__menu-item">
                         <a href="#" class="header__menu-link">Help the shelter</a>
@@ -88,92 +89,18 @@
         </h2>
         <div class="pets__carousel" id="pets__carousel">
             <div class="pets__cards-block-container">
-                <button class="pets__carousel-btn"><img src="../assets/pictures/carousel/arrow-left.jpg" alt="left-arr"></button>
-                <div class="pets__cards-container">
-                    <figure class="pets__card">
-                        <img src="../assets/pictures/pets/katrine.png" class="pets__card-img" alt="cat">
-                        <figcaption class="pets__card-caption">Katrine</figcaption>
-                        <button class="btn-primary_outlined pets__card-btn">Learn more</button>
-                    </figure>
-                    <figure class="pets__card">
-                        <img src="../assets/pictures/pets/jennifer.png" class="pets__card-img" alt="cat">
-                        <figcaption class="pets__card-caption">Jennifer</figcaption>
-                        <button class="btn-primary_outlined pets__card-btn">Learn more</button>
-                    </figure>
-                    <figure class="pets__card">
-                        <img src="../assets/pictures/pets/woody.png" class="pets__card-img" alt="cat">
-                        <figcaption class="pets__card-caption">Woody</figcaption>
-                        <button class="btn-primary_outlined pets__card-btn">Learn more</button>
-                    </figure>
+                <button class="pets__carousel-btn pets__carousel-btn_left"><img src="../assets/pictures/carousel/left-arrow.svg" alt="left-arr"></button>
+                <div class="pets__cards-container" id="pets__cards-container">
+
                 </div>
-                <button class="pets__carousel-btn"><img src="../assets/pictures/carousel/arrow-right.jpg" alt="right-arr"></button>
+                <button class="pets__carousel-btn pets__carousel-btn_right"><img src="../assets/pictures/carousel/right-arrow.svg" alt="right-arr"></button>
             </div>
 
-            <div id="pets__carousel-modal" class="pets__carousel-modal">
-                <div class="pets__modal-body">
-                    <button class="btn-primary_outlined pets__close-modal">
-                        <img src="../assets/pictures/icons/icon-close.svg" alt="close">
-                    </button>
-                    <img src="../assets/pictures/pets/katrine.png" alt="" class="pets__modal-img">
-                    <div class="pets__modal-text-container">
-                        <h3 class="pets__modal-name">Katrine</h3>
-                        <h4 class="pets__modal-breed">Cat - Labrador</h4>
-                        <p class="pets__modal-description">Jennifer is a sweet 2 months old Labrador that is patiently
-                            waiting to find a new forever home. This girl really enjoys being able to go outside to run
-                            and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
-                        <ul class="pets__modal-feature-list">
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Age: </span>2 months</li>
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Inoculations: </span>none</li>
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Diseases: </span>none</li>
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Parasites: </span>none</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="pets__modal-body">
-                    <button class="btn-primary_outlined pets__close-modal">
-                        <img src="../assets/pictures/icons/icon-close.svg" alt="close">
-                    </button>
-                    <img src="../assets/pictures/pets/jennifer.png" alt="" class="pets__modal-img">
-                    <div class="pets__modal-text-container">
-                        <h3 class="pets__modal-name">Jennifer</h3>
-                        <h4 class="pets__modal-breed">Dog - Labrador</h4>
-                        <p class="pets__modal-description">Jennifer is a sweet 2 months old Labrador that is patiently
-                            waiting to find a new forever home. This girl really enjoys being able to go outside to run
-                            and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
-                        <ul class="pets__modal-feature-list">
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Age: </span>2 months</li>
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Inoculations: </span>none</li>
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Diseases: </span>none</li>
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Parasites: </span>none</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="pets__modal-body">
-                    <button class="btn-primary_outlined pets__close-modal">
-                        <img src="../assets/pictures/icons/icon-close.svg" alt="close">
-                    </button>
-                    <img src="../assets/pictures/pets/woody.png" alt="" class="pets__modal-img">
-                    <div class="pets__modal-text-container">
-                        <h3 class="pets__modal-name">Woody</h3>
-                        <h4 class="pets__modal-breed">Dog - Labrador</h4>
-                        <p class="pets__modal-description">Jennifer is a sweet 2 months old Labrador that is patiently
-                            waiting to find a new forever home. This girl really enjoys being able to go outside to run
-                            and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
-                        <ul class="pets__modal-feature-list">
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Age: </span>2 months</li>
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Inoculations: </span>none</li>
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Diseases: </span>none</li>
-                            <li class="pets__modal-feature-item"><span class="pets__feature">Parasites: </span>none</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <div id="pets__carousel-modal" class="pets__carousel-modal"></div>
             <div class="pets__carousel-btns-container">
                 <div class="pets__carousel-nav-btns-container">
-                    <button class="pets__carousel-btn"><img src="../assets/pictures/carousel/arrow-left.jpg" alt="left-arr"></button>
-                    <button class="pets__carousel-btn"><img src="../assets/pictures/carousel/arrow-right.jpg" alt="right-arr"></button>
+                    <button class="pets__carousel-btn pets__carousel-btn_left"><img src="../assets/pictures/carousel/left-arrow.svg" alt="left-arr"></button>
+                    <button class="pets__carousel-btn pets__carousel-btn_right"><img src="../assets/pictures/carousel/right-arrow.svg" alt="right-arr"></button>
                 </div>
                 <button class="btn-primary pets__btn">Get to know to reset</button>
             </div>
