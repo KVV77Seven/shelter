@@ -31,10 +31,10 @@ export function getCardById(petId, btnText = 'Learn more') {
         figcaption.innerHTML = pet.name;
         btn.innerHTML = btnText;
 
-        const {modalBody, closeButton} = createModal(pet);
-        attachModal(modalBody, btn, closeButton);
+        const {modal, modalBody, closeButton} = createModal(pet);
         appendChilds(card, [img, figcaption, btn]);
-        return {card, items: {img, figcaption, btn, modalBody}};
+        attachModal(modal,modalBody,btn,closeButton);
+        return {card, items: {img, figcaption, btn,modal, modalBody}};
     }
     throw new Error(`can't find pet with id ${petId}`);
 }
@@ -104,5 +104,9 @@ function createModal(pet) {
     textContainer.appendChild(featureList);
 
     modalBody.appendChild(textContainer);
-    return {modalBody, closeButton};
+
+    const modal = document.createElement('div');
+    modal.className = "pets__carousel-modal";
+    modal.appendChild(modalBody);
+    return {modal, modalBody, closeButton};
 }

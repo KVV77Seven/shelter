@@ -1,6 +1,6 @@
-@import 'variables';
-@import 'feautures.scss';
-@import "breakpoints";
+@import '../variables';
+@import '../feautures';
+@import "../breakpoints";
 
 html, body {
   min-height: 100vh;
@@ -166,7 +166,7 @@ h1,h2,h3,h4,h5,h6 {
 
 //welcome section start ##############################
 .welcome {
-  background: url('../pictures/startScreen/gradient-background-sm.png');
+  background: url('../../pictures/startScreen/gradient-background-sm.png');
   background-size: cover;
   background-repeat: no-repeat;
   padding: 150px 10px 0 10px;
@@ -292,8 +292,13 @@ h1,h2,h3,h4,h5,h6 {
   padding-bottom: 30px;
   transition: 0.2s ease-in-out;
 
-  &:not(:first-child) {
-    margin-left: 40px;
+
+}
+.pets {
+  .pet-card {
+    &:not(:first-child) {
+      margin-left: 40px;
+    }
   }
 }
 
@@ -521,7 +526,7 @@ h1,h2,h3,h4,h5,h6 {
 //footer start ##############################
 footer {
   padding: 30px 10px 0 10px;
-  background: url('../pictures/startScreen/footer-sm.png') no-repeat;
+  background: url('../../pictures/startScreen/footer-sm.png') no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
