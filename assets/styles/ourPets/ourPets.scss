@@ -14,12 +14,6 @@
   .header__subtitle {
     color: var(--color-primary-btn);
   }
-  .header__menu-link {
-    color: var(--color-common-h);
-  }
-  .header__menu-link_active {
-    color: var(--color-primary-btn)
-  }
   .header__burger-item {
     background: #000;
   }
@@ -34,6 +28,10 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 30px;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .pagination__btn-container {
   display: flex;
@@ -42,11 +40,20 @@
   align-items: center;
   margin-top: 42px;
 }
+#pagination-page {
+  cursor: default;
+}
 
 @media (min-width: $break-md) {
   #our-pets {
     .header {
       padding: 30px;
+    }
+    .header__menu-link {
+      color: var(--color-common-h);
+    }
+    .header__menu-link_active {
+      color: var(--color-primary-btn)
     }
   }
   .pagination {
@@ -54,7 +61,7 @@
   }
   .pagination__cards-container {
     margin-top: 30px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, fit-content(50%));
     column-gap: 40px;
   }
   .pagination__btn-container {
@@ -74,7 +81,7 @@
   }
   .pagination__cards-container {
     margin-top: 45px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, fit-content(25%));
   }
   .pagination__btn-container {
     margin-top: 45px;
