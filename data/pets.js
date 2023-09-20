@@ -7,6 +7,13 @@ import charlyImg from "shelter/assets/pictures/pets/charly.png";
 import scarlettImg from "shelter/assets/pictures/pets/scarlett.png";
 import freddieImg from "shelter/assets/pictures/pets/freddie.png";
 
+import pets from 'shelter/data/pets.json';
+pets.forEach((e, i) => {
+    e.id = i;
+})
+export {pets}
+
+/*
 const pets = [
     {
         name: "Katrine",
@@ -63,7 +70,7 @@ pets.forEach((e, i) => {
     e.id = i;
 })
 
-export {pets}
+export {pets}*/
 
 
 /*<div className="pets__modal-body">

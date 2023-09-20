@@ -4,7 +4,8 @@ import {getCardById, getCardsCount} from "shelter/jsSrc/petCardGetter";
 const container = document.getElementById('pagination__cards-container');
 
 let currentCards = 0;
-let currentIndex = 0;
+let currentIndex = Number(localStorage.getItem('currentIndex')) ||  0;
+let maxIndex = 0
 const countCards = {
     sm: 0,
     md: 0,
@@ -28,6 +29,9 @@ export function init(
     countCards.lg = countCardsLg;
     setCurrentCardsFromBp(currentBreakpoint.current);
     window.addEventListener('breakpointChange', onBpChange);
+    window.addEventListener('beforeunload', () => {
+        localStorage.setItem('currentIndex', currentIndex.toString());
+    })
 
     paginators.moveLeft.addEventListener('click', moveLeft)
     paginators.moveRight.addEventListener('click', moveRight)
@@ -69,6 +73,10 @@ function updateCardsOnPage() {
 
 function onBpChange(e) {
     setCurrentCardsFromBp(e.detail);
+    updateMaxIndex();
+    if (currentIndex > maxIndex) {
+        currentIndex = maxIndex;
+    }
     updateCardsOnPage();
     updateBtnsState();
 }
@@ -86,7 +94,7 @@ function jumpRight() {
     if (paginators.jumpRight.disabled) {
         return;
     }
-    currentIndex = Math.ceil(getCardsCount()/currentCards)-1; 
+    currentIndex = maxIndex;
     updateBtnsState()
     updateCardsOnPage()
 
@@ -120,14 +128,19 @@ function updateBtnsState() {
         paginators.jumpLeft.disabled = false;
         console.log('dis2')
     } 
-    if(currentIndex >= Math.ceil(getCardsCount()/ currentCards)-1) {
+    if(currentIndex >= maxIndex) {
         paginators.moveRight.disabled = true;
         paginators.jumpRight.disabled = true;
         console.log('dis3')
     }
-    if (currentIndex < Math.ceil(getCardsCount()/ currentCards)-1) {
+    if (currentIndex < maxIndex) {
         paginators.moveRight.disabled = false;
         paginators.jumpRight.disabled = false;
         console.log('dis4')
     }
+    paginators.page.innerHTML = currentIndex + 1;
+}
+
+function updateMaxIndex() {
+    maxIndex = Math.ceil(getCardsCount()/ currentCards)-1;
 }

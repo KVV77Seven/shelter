@@ -70,7 +70,7 @@ function createModal(pet) {
 
     const breedHeading = document.createElement("h4");
     breedHeading.className = "pets__modal-breed";
-    breedHeading.textContent = pet.breed;
+    breedHeading.textContent = `${pet.type} - ${pet.breed}`;
     textContainer.appendChild(breedHeading);
 
     const descriptionParagraph = document.createElement("p");
@@ -83,22 +83,22 @@ function createModal(pet) {
 
     const ageListItem = document.createElement("li");
     ageListItem.className = "pets__modal-feature-item";
-    ageListItem.innerHTML = "<span class='pets__feature'>Age: </span>2 months";
+    ageListItem.innerHTML = `<span class='pets__feature'>Age: </span>${pet.age}`;
     featureList.appendChild(ageListItem);
 
     const inoculationsListItem = document.createElement("li");
     inoculationsListItem.className = "pets__modal-feature-item";
-    inoculationsListItem.innerHTML = "<span class='pets__feature'>Inoculations: </span>none";
+    inoculationsListItem.innerHTML = `<span class='pets__feature'>Inoculations: </span>${pet.inoculations.join(' ')}`;
     featureList.appendChild(inoculationsListItem);
 
     const diseasesListItem = document.createElement("li");
     diseasesListItem.className = "pets__modal-feature-item";
-    diseasesListItem.innerHTML = "<span class='pets__feature'>Diseases: </span>none";
+    diseasesListItem.innerHTML = `<span class='pets__feature'>Diseases: </span>${pet.diseases.join(' ')}`;
     featureList.appendChild(diseasesListItem);
 
     const parasitesListItem = document.createElement("li");
     parasitesListItem.className = "pets__modal-feature-item";
-    parasitesListItem.innerHTML = "<span class='pets__feature'>Parasites: </span>none";
+    parasitesListItem.innerHTML = `<span class='pets__feature'>Parasites: </span>${pet.parasites.join(' ')}`;
     featureList.appendChild(parasitesListItem);
 
     textContainer.appendChild(featureList);
